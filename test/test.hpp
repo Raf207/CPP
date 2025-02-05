@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   test.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 16:09:35 by rafnasci          #+#    #+#             */
-/*   Updated: 2025/02/05 19:18:14 by rafnasci         ###   ########.fr       */
+/*   Created: 2025/02/04 15:57:35 by rafnasci          #+#    #+#             */
+/*   Updated: 2025/02/04 19:41:09 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <ctype.h>
+#ifndef TEST_HPP
+# define TEST_HPP
 
-int main(int ac, char **av)
-{
-	if (ac == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	else{
-		for (int i = 1; i < ac; i++){
-			for (int j = 0; av[i][j]; j++)
-				av[i][j] = toupper(av[i][j]);
-			std::cout << av[i] ;
-		}
-		std::cout << std::endl;
-	}
-	return 0;
-}
+class	test{
+
+	public :
+	
+		test(void);
+		~test(void);
+		
+		int		publicint;
+		void	publicfonc(void);
+		void	printint(int a);
+		int		getstat(void);
+	
+	private :
+
+		int _privateint;
+		void	privatefonc(void);
+		static int _stat;
+};
+
+
+#endif

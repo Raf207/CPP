@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 16:09:35 by rafnasci          #+#    #+#             */
-/*   Updated: 2025/02/05 19:18:14 by rafnasci         ###   ########.fr       */
+/*   Created: 2025/02/05 21:49:27 by rafnasci          #+#    #+#             */
+/*   Updated: 2025/02/05 22:08:47 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <ctype.h>
+#include "Contact.hpp"
 
-int main(int ac, char **av)
+Contact::Contact(/* args */)
 {
-	if (ac == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	else{
-		for (int i = 1; i < ac; i++){
-			for (int j = 0; av[i][j]; j++)
-				av[i][j] = toupper(av[i][j]);
-			std::cout << av[i] ;
-		}
-		std::cout << std::endl;
-	}
-	return 0;
+}
+
+Contact::~Contact()
+{
+}
+
+void	Contact::search(void)
+{
+	std::cout << "Name :" << this->_name << std::endl;
+	std::cout << "Surname :" << this->_surname << std::endl;
+	std::cout << "Nickname :" << this->_nickname << std::endl;
+	std::cout << "Number :" << this->_number << std::endl;
+	std::cout << "Secret :" << this->_secret << std::endl;
+	return ;
 }

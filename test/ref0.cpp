@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   ref0.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 16:09:35 by rafnasci          #+#    #+#             */
-/*   Updated: 2025/02/05 19:18:14 by rafnasci         ###   ########.fr       */
+/*   Created: 2025/02/05 20:05:05 by rafnasci          #+#    #+#             */
+/*   Updated: 2025/02/05 20:09:19 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <ctype.h>
 
-int main(int ac, char **av)
+int main(void)
 {
-	if (ac == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	else{
-		for (int i = 1; i < ac; i++){
-			for (int j = 0; av[i][j]; j++)
-				av[i][j] = toupper(av[i][j]);
-			std::cout << av[i] ;
-		}
-		std::cout << std::endl;
-	}
+	int	numberBalls = 42;
+
+	int	*BallsPtr = &numberBalls;
+	int	&BallsRef = numberBalls;
+
+	std::cout << numberBalls << *BallsPtr << BallsRef << std::endl;
+
+	*BallsPtr = 19;
+	std::cout << numberBalls << std::endl;
+	BallsRef = 10;
+	std::cout << numberBalls << std::endl;
+
 	return 0;
 }
