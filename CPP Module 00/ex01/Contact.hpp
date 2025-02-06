@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 21:48:24 by rafnasci          #+#    #+#             */
-/*   Updated: 2025/02/05 22:26:47 by rafnasci         ###   ########.fr       */
+/*   Updated: 2025/02/06 05:03:24 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,10 @@ class Contact
 
 	public:
 
-		Contact(/* args */);
-		~Contact();
-
 		void	search(void);
 		void	add(void);
+		
+		std::string	getInfo(int i);
 		
 };
 
