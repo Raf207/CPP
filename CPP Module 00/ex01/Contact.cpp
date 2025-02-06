@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 21:49:27 by rafnasci          #+#    #+#             */
-/*   Updated: 2025/02/06 06:14:54 by rafnasci         ###   ########.fr       */
+/*   Updated: 2025/02/06 17:19:55 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,13 @@ void Contact::add(void)
 		std::getline(std::cin, this->_name);
 		if (std::cin.eof())
 			return ;
-	} while (this->_name.empty()
-			|| this->_number.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ") != this->_number.npos);
+	} while (this->_name.empty());
 	do{
 		std::cout << "Surname  : ";
 		std::getline(std::cin, this->_surname);
 		if (std::cin.eof())
 			return ;
-	} while (this->_surname.empty()
-			|| this->_number.find_first_not_of("abcdefghijklmnopqrstuvwxyz") != this->_number.npos);
+	} while (this->_surname.empty());
 	do{
 		std::cout << "Nickname : ";
 		std::getline(std::cin, this->_nickname);
