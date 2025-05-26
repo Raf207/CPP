@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 12:06:17 by rafnasci          #+#    #+#             */
-/*   Updated: 2025/05/11 18:06:37 by rafnasci         ###   ########.fr       */
+/*   Updated: 2025/05/26 09:09:20 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,11 @@ public:
 	void	setRawBits( int const raw );
 	float	toFloat( void ) const;
 	int		toInt( void ) const;
+
+	static Fixed&	min(Fixed &a, Fixed &b);
+	static Fixed&	min(const Fixed &a, const Fixed &b);
+	static Fixed&	max(Fixed &a, Fixed &b);
+	static Fixed&	max(const Fixed &a, const Fixed &b);
 };
 
 std::ostream & operator<<(std::ostream &o, Fixed const &src);
