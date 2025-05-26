@@ -6,11 +6,11 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 22:25:31 by rafnasci          #+#    #+#             */
-/*   Updated: 2025/05/14 23:53:11 by rafnasci         ###   ########.fr       */
+/*   Updated: 2025/05/26 18:02:36 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HHP
+#ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
 
 #include <string>
