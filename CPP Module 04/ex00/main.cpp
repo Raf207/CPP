@@ -6,12 +6,13 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 17:53:53 by rafnasci          #+#    #+#             */
-/*   Updated: 2025/05/22 18:35:36 by rafnasci         ###   ########.fr       */
+/*   Updated: 2025/05/26 09:00:15 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 #include "Cat.hpp"
+#include "WrongCat.hpp"
 
 int main()
 {
@@ -26,7 +27,21 @@ int main()
 	a->makeSound();
 	b->makeSound();
 	c->makeSound();
+
+	std::cout << "------------------------------------\n";
+
+	WrongAnimal* wa = new WrongAnimal();
+	WrongAnimal* wb = new WrongCat();
+
+	std::cout << "wa : " << wa->getType() << std::endl;
+	std::cout << "wb : " << wb->getType() << std::endl;
+	std::cout << "wa : "; 
+	wa->makeSound();
+	std::cout << "wb : ";
+	wb->makeSound();
 	
+	delete wa;
+	delete wb;
 	delete a;
 	delete b;
 	delete c;

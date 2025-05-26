@@ -7,7 +7,7 @@ RM = rm -rf
 
 OBJ_DIR = obj/
 
-SRC_FILES = main Animal Cat Dog
+SRC_FILES = main Animal Cat Dog WrongAnimal WrongCat
 
 OBJ = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 SRC = $(addsuffix .cpp, $(SRC_FILES))
