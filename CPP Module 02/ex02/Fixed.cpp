@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/11 12:08:54 by rafnasci          #+#    #+#             */
-/*   Updated: 2025/05/11 18:13:09 by rafnasci         ###   ########.fr       */
+/*   Created: 2025/05/26 08:18:12 by rafnasci          #+#    #+#             */
+/*   Updated: 2025/05/26 08:18:18 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -195,4 +195,32 @@ std::ostream & operator<<(std::ostream &o, Fixed const &src)
 	o << src.toFloat();
 	
 	return o;
+}
+
+Fixed&	Fixed::min(const Fixed &a, const Fixed &b)
+{
+	if (a.getRawBits() < b.getRawBits())
+		return ((Fixed&)a);
+	return ((Fixed&)b);
+}
+
+Fixed&	Fixed::min(Fixed &a, Fixed &obj2)
+{
+	if (a.getRawBits() < obj2.getRawBits())
+		return (a);
+	return (obj2);
+}
+
+Fixed&	Fixed::max(Fixed &a, Fixed &obj2)
+{
+	if (a.getRawBits() > obj2.getRawBits())
+		return (a);
+	return (obj2);
+}
+
+Fixed&	Fixed::max(const Fixed &a, const Fixed &obj2)
+{
+	if (a.getRawBits() > obj2.getRawBits())
+		return ((Fixed&)a);
+	return ((Fixed&)obj2);
 }
