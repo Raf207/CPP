@@ -6,12 +6,11 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 08:18:12 by rafnasci          #+#    #+#             */
-/*   Updated: 2025/05/26 08:18:18 by rafnasci         ###   ########.fr       */
+/*   Updated: 2025/05/26 08:21:33 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-
 
 Fixed::Fixed(void) : _fixed_v(0)
 {
