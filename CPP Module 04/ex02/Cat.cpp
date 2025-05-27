@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 17:49:09 by rafnasci          #+#    #+#             */
-/*   Updated: 2025/05/26 13:48:34 by rafnasci         ###   ########.fr       */
+/*   Updated: 2025/05/27 15:15:41 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Cat::Cat()
 	return ;
 }
 
-Cat::Cat(const Cat &copy) : Animal()
+Cat::Cat(const Cat &copy) : Animal(copy)
 {
 	std::cout << "Copy Constructor for Cat was called" << std::endl;
 	this->type = copy.type;

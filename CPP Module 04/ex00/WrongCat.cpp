@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 08:52:44 by rafnasci          #+#    #+#             */
-/*   Updated: 2025/05/26 08:54:08 by rafnasci         ###   ########.fr       */
+/*   Updated: 2025/05/27 15:16:12 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ WrongCat::WrongCat()
 	return ;
 }
 
-WrongCat::WrongCat(const WrongCat &copy) : WrongAnimal()
+WrongCat::WrongCat(const WrongCat &copy) : WrongAnimal(copy)
 {
 	std::cout << "Copy Constructor for Cat was called" << std::endl;
 	*this = copy;
