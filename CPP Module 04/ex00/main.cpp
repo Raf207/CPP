@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/22 17:53:53 by rafnasci          #+#    #+#             */
-/*   Updated: 2025/05/26 09:00:15 by rafnasci         ###   ########.fr       */
+/*   Updated: 2025/05/27 15:03:49 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,16 @@ int main()
 	std::cout << "a : " << a->getType() << std::endl;
 	std::cout << "b : " << b->getType() << std::endl;
 	std::cout << "c : " << c->getType() << std::endl;
-
+	std::cout << "a : ";
 	a->makeSound();
+	std::cout << "b : ";
 	b->makeSound();
+	std::cout << "c : ";
 	c->makeSound();
 
+	delete a;
+	delete b;
+	delete c;
 	std::cout << "------------------------------------\n";
 
 	WrongAnimal* wa = new WrongAnimal();
@@ -42,7 +47,4 @@ int main()
 	
 	delete wa;
 	delete wb;
-	delete a;
-	delete b;
-	delete c;
 }
